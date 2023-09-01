@@ -6,7 +6,7 @@ download-ci-llvm = false
 targets = "AArch64;RISCV;WebAssembly;X86"
 
 [build]
-compiler-docs = false
+compiler-docs = true
 docs = false
 extended = true
 locked-deps = true
