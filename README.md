@@ -8,11 +8,11 @@ The target triplet is: riscv32em-unknown-none-elf
 
 Note: This might require up to ~35GB of disk space to build.
 
-## Building the toolchain
+## Building rustc
 
 1. Run `./01-clone.sh`. This will download the necessary sources.
 2. Run `./02-patch.sh`. This will patch the sources for RV32E.
-3. Run `./03-build.sh`. This will build the compiler.
+3. Run `./03-rustc-build.sh`. This will build the compiler.
 
 Now you have two options:
 
@@ -23,7 +23,7 @@ In case of (a) you'll have to keep this repository in-place as `rustup` will lin
 to access the toolchain. In case of (b) the toolchain will be permanently installed, after which
 you can delete this repository.
 
-## Using the toolchain
+## Using rustc
 
 After installing prefix your `cargo` invocations with `rustup run rv32e-nightly-2023-04-05-x86_64-unknown-linux-gnu`
 and add `--target=riscv32em-unknown-none-elf`. For example this should work:
@@ -34,6 +34,10 @@ rustup run rv32e-nightly-2023-04-05-x86_64-unknown-linux-gnu cargo build --targe
 
 Only `no_std` is supported!
 
+## Building clang (optional)
+
+You can also build clang if you want. After cloning and patching the sources run `03-clang-build-and-install.sh`
+to build and install it. The clang binary will be installed to `/opt/clang-rv32e/bin/clang`.
 
 ## License
 

@@ -8,3 +8,4 @@ cp ../patches/config.toml ./
 
 cd src/llvm-project
 patch -p1 < ../../../patches/llvm-D70401.patch
+patch -p1 < ../../../patches/compiler-rt.patch
