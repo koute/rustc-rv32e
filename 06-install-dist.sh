@@ -14,13 +14,13 @@ inst () {
     cd ../../..
 }
 
-inst "rustc-nightly-x86_64-unknown-linux-gnu"
-inst "rust-dev-nightly-x86_64-unknown-linux-gnu"
-inst "rust-std-nightly-x86_64-unknown-linux-gnu"
+inst "rustc-nightly-$TOOLCHAIN_HOST_TRIPLET"
+inst "rust-dev-nightly-$TOOLCHAIN_HOST_TRIPLET"
+inst "rust-std-nightly-$TOOLCHAIN_HOST_TRIPLET"
 inst "rust-std-nightly-riscv32em-unknown-none-elf"
-inst "cargo-nightly-x86_64-unknown-linux-gnu"
+inst "cargo-nightly-$TOOLCHAIN_HOST_TRIPLET"
 inst "rust-src-nightly"
-inst "rustfmt-nightly-x86_64-unknown-linux-gnu"
-inst "clippy-nightly-x86_64-unknown-linux-gnu"
-inst "rustc-docs-nightly-x86_64-unknown-linux-gnu"
+inst "rustfmt-nightly-$TOOLCHAIN_HOST_TRIPLET"
+inst "clippy-nightly-$TOOLCHAIN_HOST_TRIPLET"
+inst "rustc-docs-nightly-$TOOLCHAIN_HOST_TRIPLET"
 inst "rustc-docs-nightly-riscv32em-unknown-none-elf"
